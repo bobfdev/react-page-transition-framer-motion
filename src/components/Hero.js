@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import Image from '../images/bird-1.jpg';
 
 const Section = styled.section`
-    background: url(${Image}) center;
+    background: url(${({ image }) => image && image }) center;
     height: 100vh;
     display: flex;
     justify-content: flex-start;
@@ -41,12 +40,12 @@ const Container = styled.div`
     }
 `
 
-function Hero() {
+function Hero({ image, title, desc }) {
     return (
-        <Section>
+        <Section image={image}>
             <Container>
-                <h1>Title</h1>
-                <p>Description</p>
+                <h1>{title}</h1>
+                <p>{desc}</p>
                 <button>Learn More</button>
             </Container>
         </Section>

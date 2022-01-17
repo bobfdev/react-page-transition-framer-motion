@@ -32,7 +32,7 @@ const NavbarLink = styled(Link)`
 function Header() {
     return (
         <Navbar>
-            <Logo to='/'>Animal</Logo>
+            <Logo to='/'>Birds</Logo>
             <NavItems>
                 <NavbarLink to='/'>Home</NavbarLink>
                 <NavbarLink to='/about'>About</NavbarLink>
